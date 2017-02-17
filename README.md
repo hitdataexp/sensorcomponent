@@ -9,5 +9,5 @@ The Sensor component - ( JAVA ) sits on an Application Server and listens to the
 * 3. Drop the 3 jars in the /lib directory
 * 4. Create directory - > /home/pi/PlayGround/output-war
 * 5. Run ANT Build
-* 6. The generated war file will be in //home/pi/PlayGround/output-war
+* 6. The generated war file will be in /home/pi/PlayGround/output-war
 * 7. Copy war file into /var/lib/tomcat7/webapps/
