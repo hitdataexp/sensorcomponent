@@ -3,11 +3,6 @@
  */
 package com.sensorcomponent.constants;
 
-import java.util.Hashtable;
-import java.util.Map;
-
-import com.pi4j.io.gpio.GpioPinDigitalOutput;
-
 /**
  * @author 
  *
