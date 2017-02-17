@@ -6,7 +6,7 @@ The Sensor component - ( JAVA ) sits on an Application Server and listens to the
 |          |            |  Raspberry Pi 3    |                     |           |
 |  Sensor  |----------->|      Running       |-------/ LAN /------>|  MongoDB  | 
 |__________|            |  Tomcat Server7    |                     |___________|
-                        |                    |
+                        |    (Java App)      |
                         |____________________|                
                         
 ```
