@@ -1,10 +1,14 @@
 # sensorcomponent
 The Sensor component - ( JAVA ) sits on an Application Server and listens to the Raspberry pi GPIO pins using the pi4j API.
 ```
- __________              ________________                       ___________
-|          |            |                |                     |           |
-|  Sensor  |----------->|  Raspberry Pi  |-------/ LAN /------>|  MongoDB  | 
-|__________|            |________________|                     |___________|
+                         ____________________
+ __________             |                    |                      ___________
+|          |            |  Raspberry Pi 3    |                     |           |
+|  Sensor  |----------->|      Running       |-------/ LAN /------>|  MongoDB  | 
+|__________|            |  Tomcat Server7    |                     |___________|
+                        |                    |
+                        |____________________|                
+                        
 ```
 ### Project Set up
 * 1. Download Code
