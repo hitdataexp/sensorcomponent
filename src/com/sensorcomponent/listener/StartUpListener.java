@@ -41,7 +41,7 @@ public class StartUpListener implements ServletContextListener {
 			            System.out.println("Motion Detected at - " + Constants.HALL_SENSOR); 
 			            //Set the data
 			            BasicDBObject sensorData = new BasicDBObject();
-			            sensorData.put("sensorId", hall_sensor_pin);
+			            sensorData.put("sensorId", Constants.HALL_SENSOR);
 			            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 			            System.out.println(timestamp);
 			            sensorData.put("timestamp", timestamp.toString());
@@ -62,7 +62,7 @@ public class StartUpListener implements ServletContextListener {
 			        	System.out.println("Motion Detected at - " + Constants.MSTRM_SENSOR); 
 			        	//Set the data
 			            BasicDBObject sensorData = new BasicDBObject();
-			            sensorData.put("sensorId", bedrm_sensor_pin);
+			            sensorData.put("sensorId", Constants.MSTRM_SENSOR);
 			            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 			            System.out.println(timestamp);
 			            sensorData.put("timestamp", timestamp.toString());
@@ -83,7 +83,7 @@ public class StartUpListener implements ServletContextListener {
 			        	System.out.println("Motion Detected at - " + Constants.GSTRM_SENSOR); 
 			        	//Set the data
 			            BasicDBObject sensorData = new BasicDBObject();
-			            sensorData.put("sensorId", gstrm_sensor_pin);
+			            sensorData.put("sensorId", Constants.GSTRM_SENSOR);
 			            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 			            System.out.println(timestamp);
 			            sensorData.put("timestamp", timestamp.toString());
