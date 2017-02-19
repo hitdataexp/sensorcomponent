@@ -12,7 +12,7 @@
 
     <target name="prepare">
         <delete dir="${basedir}/build" />
-        <delete file="/home/pi/PlayGround/output-ear/sensorcomponent.war" />
+        <delete file="/home/pi/PlayGround/output-war/sensorcomponent.war" />
         <mkdir dir="${basedir}/build" />
         <mkdir dir="${basedir}/build/war" />
         <mkdir dir="${build.dir}/WEB-INF/classes" />
@@ -47,6 +47,6 @@
         <jar jarfile="${basedir}/build/war/${warFile}" basedir="${build.dir}" excludes="war" />
 <!--give the correct path of jboss in this line and uncomment the line below to place the wars automatically into ur jboss dir-->
         <echo message=" Copying the war file to location : ${tomcat.path}" />
-        <copy file="${basedir}/build/war/${warFile}" todir="/home/pi/PlayGround/output-ear/" />
+        <copy file="${basedir}/build/war/${warFile}" todir="/home/pi/PlayGround/output-war/" />
     </target>
 </project>
