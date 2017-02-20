@@ -7,6 +7,6 @@ public interface MongoDBDao {
 	/*
 	 * Raspberry Pi 
 	 */
-	public int saveSensorData(final String sensorId, final BasicDBObject sensorData);
+	public int saveSensorData(final BasicDBObject sensorData);
 	
 }
