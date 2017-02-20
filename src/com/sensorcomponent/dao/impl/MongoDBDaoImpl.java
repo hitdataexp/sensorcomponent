@@ -1,6 +1,7 @@
 package com.sensorcomponent.dao.impl;
 
 import java.net.UnknownHostException;
+import java.util.Date;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -34,6 +35,14 @@ public class MongoDBDaoImpl implements MongoDBDao {
 			//Set the Next Number as Id
 			long id = getNextId(table);
 			sensorData.put("id", id);
+			Date date = new Date();
+			date.setMonth(1);
+			sensorData.put("month", date.getMonth());
+			sensorData.put("day", date.getDay());
+			sensorData.put("hour", date.getHours());
+	        sensorData.put("minute", date.getMinutes());
+	        sensorData.put("second", date.getSeconds());
+	        sensorData.put("timestamp", date);			
 			//Insert into DB
 			table.insert(sensorData);
 			return 1;
