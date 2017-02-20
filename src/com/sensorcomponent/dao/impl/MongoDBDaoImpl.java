@@ -22,20 +22,21 @@ public class MongoDBDaoImpl implements MongoDBDao {
 		}
 	}
 	
-	private long getNextId(final DBCollection collection){
-		DBCursor cursor = collection.find();
+	private long getNextId(final DBCollection table){
+		DBCursor allrows = table.find();
 		//Get the next number
-		return 1 + cursor.count();
+		return 1 + allrows.count();
 	}
 
 	public int saveSensorData(final String sensorId, final BasicDBObject sensorData) {
 		try{
 			DB db = client.getDB("sensordatabase");
-			DBCollection collection = db.getCollection(sensorId);
+			DBCollection table = db.getCollection("sensordata");
 			//Set the Next Number as Id
-			sensorData.put("id", getNextId(collection));
+			long id = getNextId(table);
+			sensorData.put("id", id);
 			//Insert into DB
-			collection.insert(sensorData);
+			table.insert(sensorData);
 			return 1;
 		} catch(Exception e){
 			System.out.println("Data not saved for - " + sensorId + ", Reason - " + e);
