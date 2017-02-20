@@ -1,6 +1,7 @@
 package com.sensorcomponent.listener;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -42,12 +43,10 @@ public class StartUpListener implements ServletContextListener {
 			            //Set the data
 			            BasicDBObject sensorData = new BasicDBObject();
 			            sensorData.put("sensorId", Constants.HALL_SENSOR);
-			            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-			            System.out.println(timestamp);
-			            sensorData.put("timestamp", timestamp.toString());
+			            sensorData.put("timestamp", new Date());
 			            //Save the data
 			            MongoDBDao dao = new MongoDBDaoImpl();
-			            dao.saveSensorData(Constants.HALL_SENSOR, sensorData);
+			            dao.saveSensorData(sensorData);
 			        }   
 
 			        if(event.getState().isLow()){   
@@ -63,12 +62,10 @@ public class StartUpListener implements ServletContextListener {
 			        	//Set the data
 			            BasicDBObject sensorData = new BasicDBObject();
 			            sensorData.put("sensorId", Constants.MSTRM_SENSOR);
-			            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-			            System.out.println(timestamp);
-			            sensorData.put("timestamp", timestamp.toString());
+			            sensorData.put("timestamp", new Date());
 			            //Save the data
 			            MongoDBDao dao = new MongoDBDaoImpl();
-			            dao.saveSensorData(Constants.MSTRM_SENSOR, sensorData);
+			            dao.saveSensorData(sensorData);
 			        }   
 
 			        if(event.getState().isLow()){   
@@ -84,12 +81,10 @@ public class StartUpListener implements ServletContextListener {
 			        	//Set the data
 			            BasicDBObject sensorData = new BasicDBObject();
 			            sensorData.put("sensorId", Constants.GSTRM_SENSOR);
-			            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-			            System.out.println(timestamp);
-			            sensorData.put("timestamp", timestamp.toString());
+			            sensorData.put("timestamp", new Date());
 			            //Save the data
 			            MongoDBDao dao = new MongoDBDaoImpl();
-			            dao.saveSensorData(Constants.GSTRM_SENSOR, sensorData);
+			            dao.saveSensorData(sensorData);
 			        }   
 
 			        if(event.getState().isLow()){   
