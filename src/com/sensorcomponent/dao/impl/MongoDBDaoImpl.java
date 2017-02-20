@@ -7,7 +7,6 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
 import com.sensorcomponent.dao.MongoDBDao;
 
 public class MongoDBDaoImpl implements MongoDBDao {
@@ -28,7 +27,7 @@ public class MongoDBDaoImpl implements MongoDBDao {
 		return 1 + allrows.count();
 	}
 
-	public int saveSensorData(final String sensorId, final BasicDBObject sensorData) {
+	public int saveSensorData(final BasicDBObject sensorData) {
 		try{
 			DB db = client.getDB("sensordatabase");
 			DBCollection table = db.getCollection("sensordata");
@@ -39,7 +38,7 @@ public class MongoDBDaoImpl implements MongoDBDao {
 			table.insert(sensorData);
 			return 1;
 		} catch(Exception e){
-			System.out.println("Data not saved for - " + sensorId + ", Reason - " + e);
+			System.out.println("Data not saved for Reason - " + e);
 			return 0;
 		} finally {
 			if(null != client)
