@@ -1,8 +1,5 @@
 package com.sensorcomponent.listener;
 
-import java.sql.Timestamp;
-import java.util.Date;
-
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
@@ -43,7 +40,6 @@ public class StartUpListener implements ServletContextListener {
 			            //Set the data
 			            BasicDBObject sensorData = new BasicDBObject();
 			            sensorData.put("sensorId", Constants.HALL_SENSOR);
-			            sensorData.put("timestamp", new Date());
 			            //Save the data
 			            MongoDBDao dao = new MongoDBDaoImpl();
 			            dao.saveSensorData(sensorData);
@@ -62,7 +58,6 @@ public class StartUpListener implements ServletContextListener {
 			        	//Set the data
 			            BasicDBObject sensorData = new BasicDBObject();
 			            sensorData.put("sensorId", Constants.MSTRM_SENSOR);
-			            sensorData.put("timestamp", new Date());
 			            //Save the data
 			            MongoDBDao dao = new MongoDBDaoImpl();
 			            dao.saveSensorData(sensorData);
@@ -81,7 +76,6 @@ public class StartUpListener implements ServletContextListener {
 			        	//Set the data
 			            BasicDBObject sensorData = new BasicDBObject();
 			            sensorData.put("sensorId", Constants.GSTRM_SENSOR);
-			            sensorData.put("timestamp", new Date());
 			            //Save the data
 			            MongoDBDao dao = new MongoDBDaoImpl();
 			            dao.saveSensorData(sensorData);
