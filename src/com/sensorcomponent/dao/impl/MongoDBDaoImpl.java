@@ -38,7 +38,7 @@ public class MongoDBDaoImpl implements MongoDBDao {
 			Date date = new Date();
 			date.setMonth(1);
 			sensorData.put("month", date.getMonth());
-			sensorData.put("day", date.getDay());
+			sensorData.put("day", date.getDate());
 			sensorData.put("hour", date.getHours());
 	        sensorData.put("minute", date.getMinutes());
 	        sensorData.put("second", date.getSeconds());
