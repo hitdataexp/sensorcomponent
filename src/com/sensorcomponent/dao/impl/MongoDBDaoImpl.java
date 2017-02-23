@@ -36,13 +36,12 @@ public class MongoDBDaoImpl implements MongoDBDao {
 			long id = getNextId(table);
 			sensorData.put("id", id);
 			Date date = new Date();
-			date.setMonth(1);
 			sensorData.put("month", date.getMonth());
 			sensorData.put("day", date.getDate());
 			sensorData.put("hour", date.getHours());
-	        sensorData.put("minute", date.getMinutes());
-	        sensorData.put("second", date.getSeconds());
-	        sensorData.put("timestamp", date);			
+	        	sensorData.put("minute", date.getMinutes());
+	        	sensorData.put("second", date.getSeconds());
+	        	sensorData.put("timestamp", date);			
 			//Insert into DB
 			table.insert(sensorData);
 			return 1;
