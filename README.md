@@ -1,5 +1,7 @@
-# sensorcomponent
-The Sensor component - ( JAVA ) sits on an Application Server and listens to the Raspberry pi GPIO pins using the pi4j API.
+	<div>
+		<h1>Urban Space Occupancy Analysis - Sensor</h1>
+	</div>
+	
 ```
                          ____________________
  __________             |                    |                      ___________
@@ -11,9 +13,6 @@ The Sensor component - ( JAVA ) sits on an Application Server and listens to the
                         
 ```
 <div>
-	<div>
-		<h1>Urban Space Occupancy Analysis - Sensor</h1>
-	</div>
 	<div>	
 		<h3>Overview</h3>
 		<p>
