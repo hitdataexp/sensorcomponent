@@ -1,6 +1,4 @@
-	<div>
-		<h1>Urban Space Occupancy Analysis - Sensor</h1>
-	</div>
+#sensorcomponent
 	
 ```
                          ____________________
@@ -13,6 +11,9 @@
                         
 ```
 <div>
+	<div>
+		<h1>Urban Space Occupancy Analysis - Sensor</h1>
+	</div>
 	<div>	
 		<h3>Overview</h3>
 		<p>
