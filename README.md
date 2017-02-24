@@ -12,14 +12,14 @@ The Sensor component - ( JAVA ) sits on an Application Server and listens to the
 ```
 <div>
 	<div>
-		<h1>Urban Space Occupancy Analysis - Reports</h1>
+		<h1>Urban Space Occupancy Analysis - Sensor</h1>
 	</div>
 	<div>	
 		<h3>Overview</h3>
 		<p>
 		  This is a ECE Senior project on IoT and data analytics. The experiment intends to give an analytical synthesis of human behavior in a given space and time.
 		  <br/>
-		<h3>Software/Frameworks Used</h3>
+		<h3>Hardware/Software/Frameworks Used</h3>
 		<p>
 			<ul>
 				<li>Motion Sensors (3)</li>
@@ -27,7 +27,11 @@ The Sensor component - ( JAVA ) sits on an Application Server and listens to the
 				<li>24 Volt Power Supply</li>
 				<li>Network Cable </li>
 				<li>Router</li>
-				<li>PC</li>
+				<li>Rasbian Ubuntu OS</li>
+				<li>Java 7</li>
+				<li>Eclipse IDE</li>
+				<li>Tomcat Application Server 7</li>
+				<li>Mongo DB</li>
 			</ul>
 		</p>		  
 		  The project holds 3 major stages.
